@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pointer.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: othmaneettaqi <othmaneettaqi@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/25 18:18:34 by oettaqi           #+#    #+#             */
-/*   Updated: 2024/11/26 16:20:21 by othmaneetta      ###   ########.fr       */
+/*   Created: 2024/11/26 15:38:49 by othmaneetta       #+#    #+#             */
+/*   Updated: 2024/11/26 15:56:57 by othmaneetta      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,6 @@ static int	ft_putchar(char c)
 {
 	write (1, &c, 1);
 	return (1);
-}
-
-static int	ft_putstr(char *s)
-{
-	int	i;
-
-	i = 0;
-	if (s[0] == 0)
-		return (0);
-	while (s[i])
-	{
-		ft_putchar(s[i]);
-		i++;
-	}
-	return (i);
 }
 
 static int	ft_strlen(char *str)
@@ -43,15 +28,15 @@ static int	ft_strlen(char *str)
 	return (i);
 }
 
-static int	ft_putnbr_base_ptr(unsigned long nb)
+int	ft_putnbr_base_10(int nb)
 {
 	int		n;
-	unsigned long	l_nb;
+	long	l_nb;
 	char 	*base;
 	int		resu;
 
 	resu = 0;
-	base = "0123456789abcdef";
+	base = "0123456789";
 	n = ft_strlen(base);
 	l_nb = nb;
 	if (l_nb < 0)
@@ -63,29 +48,34 @@ static int	ft_putnbr_base_ptr(unsigned long nb)
 		resu += ft_putchar(base[l_nb % n]);
 	else
 	{
-		resu += ft_putnbr_base_ptr (l_nb / n);
+		resu += ft_putnbr_base_10 (l_nb / n);
 		resu += ft_putchar (base[(l_nb % n)]);
 	}
 	return (resu);
 }
 
-int ft_print_ptr(void *ptr)
+int	ft_putnbr_base_10_un( unsigned int nb)
 {
-    int resu = 0;
+	int		n;
+	long	l_nb;
+	char 	*base;
+	int		resu;
 
-    if (ptr == NULL)
-        return (ft_putstr("(nil)"));
-    resu += ft_putchar('0');
-    resu += ft_putchar('x');
-    resu += ft_putnbr_base_ptr((unsigned long)ptr);
-    return resu;
+	resu = 0;
+	base = "0123456789";
+	n = ft_strlen(base);
+	l_nb = nb;
+	if (l_nb < 0)
+	{
+		l_nb = l_nb * (-1);
+		resu += ft_putchar('-');
+	}
+	if (l_nb / n == 0)
+		resu += ft_putchar(base[l_nb % n]);
+	else
+	{
+		resu += ft_putnbr_base_10_un (l_nb / n);
+		resu += ft_putchar (base[(l_nb % n)]);
+	}
+	return (resu);
 }
-
-// int main()
-// {
-// 	int a;
-// 	a = printf("%p", NULL);
-// 	printf("%d\n",a);
-// 	printf("%d\n", ft_putstr("(nil)"));
-// 	return (0);
-// }
