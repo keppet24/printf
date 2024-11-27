@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_printf.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: othmaneettaqi <othmaneettaqi@student.42    +#+  +:+       +#+        */
+/*   By: oettaqi <oettaqi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 15:38:49 by othmaneetta       #+#    #+#             */
-/*   Updated: 2024/11/26 15:56:57 by othmaneetta      ###   ########.fr       */
+/*   Updated: 2024/11/27 11:58:47 by oettaqi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_putnbr_base_10(int nb)
 {
 	int		n;
 	long	l_nb;
-	char 	*base;
+	char	*base;
 	int		resu;
 
 	resu = 0;
@@ -58,7 +58,7 @@ int	ft_putnbr_base_10_un( unsigned int nb)
 {
 	int		n;
 	long	l_nb;
-	char 	*base;
+	char	*base;
 	int		resu;
 
 	resu = 0;

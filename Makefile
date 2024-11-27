@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: othmaneettaqi <othmaneettaqi@student.42    +#+  +:+       +#+         #
+#    By: oettaqi <oettaqi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/24 18:38:06 by oettaqi           #+#    #+#              #
-#    Updated: 2024/11/26 15:49:11 by othmaneetta      ###   ########.fr        #
+#    Updated: 2024/11/27 11:20:39 by oettaqi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-SRCS = hexa.c ft_printf.c pointer.c ft_putnbr.c
+SRCS = hexa.c ft_printf.c pointer.c ft_putnbr_printf.c
 
 CFLAGS = -Wall -Wextra -Werror
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pointer.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: othmaneettaqi <othmaneettaqi@student.42    +#+  +:+       +#+        */
+/*   By: oettaqi <oettaqi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 18:18:34 by oettaqi           #+#    #+#             */
-/*   Updated: 2024/11/26 16:20:21 by othmaneetta      ###   ########.fr       */
+/*   Updated: 2024/11/27 13:58:32 by oettaqi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,10 @@ static int	ft_strlen(char *str)
 
 static int	ft_putnbr_base_ptr(unsigned long nb)
 {
-	int		n;
+	int				n;
 	unsigned long	l_nb;
-	char 	*base;
-	int		resu;
+	char			*base;
+	int				resu;
 
 	resu = 0;
 	base = "0123456789abcdef";
@@ -69,16 +69,17 @@ static int	ft_putnbr_base_ptr(unsigned long nb)
 	return (resu);
 }
 
-int ft_print_ptr(void *ptr)
+int	ft_print_ptr(void *ptr)
 {
-    int resu = 0;
+	int	resu;
 
-    if (ptr == NULL)
-        return (ft_putstr("(nil)"));
-    resu += ft_putchar('0');
-    resu += ft_putchar('x');
-    resu += ft_putnbr_base_ptr((unsigned long)ptr);
-    return resu;
+	resu = 0;
+	if (ptr == NULL)
+		return (ft_putstr("(nil)"));
+	resu += ft_putchar('0');
+	resu += ft_putchar('x');
+	resu += ft_putnbr_base_ptr((unsigned long)ptr);
+	return (resu);
 }
 
 // int main()

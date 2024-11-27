@@ -6,7 +6,7 @@
 /*   By: oettaqi <oettaqi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 18:37:55 by oettaqi           #+#    #+#             */
-/*   Updated: 2024/11/25 16:55:32 by oettaqi          ###   ########.fr       */
+/*   Updated: 2024/11/27 11:58:02 by oettaqi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_putnbr_base(unsigned int nb)
 {
 	int		n;
 	long	l_nb;
-	char 	*base;
+	char	*base;
 	int		resu;
 
 	resu = 0;
@@ -58,7 +58,7 @@ int	ft_putnbr_base_maj(unsigned int nb)
 {
 	int		n;
 	long	l_nb;
-	char 	*base;
+	char	*base;
 	int		resu;
 
 	resu = 0;
